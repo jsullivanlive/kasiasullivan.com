@@ -1,0 +1,260 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"> 
+<html>
+<!--
+
+Which do you do more often, count your calories or view source on webpages?
+
+Seriously - you should probably give me a call.  ;)
+
+617-894-2719
+
+-->
+    <head>
+		<title>Kasia Sullivan Personal Trainer in Cambridge Massachusetts</title>
+        <style>
+        body,
+        html {
+            margin:0;
+            padding:0;
+            background: url(bg.gif);
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 17px;
+            line-height: 30px;
+            color: white;
+        }
+        h1 {
+            font-size: 60px;
+			//font-family: /*'Ubuntu',*/ sans-serif;
+			font-family: 'Dancing Script', cursive;
+			margin-bottom:15px;
+        }
+        h2 { 
+			margin-top:0px;
+			padding-top:0px;
+            font-size: 40px;
+        }
+        h3 { 
+            font-size: 26px;
+			margin-top:120px;
+        }
+        a {
+            color: white;
+        }
+        .stretch {
+            width:100%;
+            //height:100%;
+            height: auto;
+        }
+        #left {
+            position: fixed;
+			left:0px;
+			top:0px;
+            width:50%;
+            height: 100%;
+            overflow: hidden;
+        }
+        #right {
+            float:right;
+            width:50%;
+        }
+		#content {
+			padding-left:15px;
+			padding-right:15px;
+			max-width:600px;
+		}
+		#navigation {
+			padding-left:16px;
+			position: fixed;
+		    top: 0px;
+		    left: 50%;
+			width:50%;
+		    z-index: 9001;
+			background:url(bg.gif);
+		}
+		#navigation-under {
+			position: fixed;
+			top:0px;
+			left:50%;
+			width:50%;
+			height:100px;
+			background:url(bg.gif);
+			filter:alpha(opacity=50);
+	    	opacity:.5;
+			z-index: 9000;
+		}
+		.section-divider {
+			background-color:white;
+			height:200px;
+			width:200px;
+		}
+		.quote-attribution {
+			text-align:right;
+		}
+        </style>
+		<link href='http://fonts.googleapis.com/css?family=Ubuntu:400,500,700' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Dancing+Script:700' rel='stylesheet' type='text/css'>
+		
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.3/jquery.min.js"></script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="jquery.scrollTo-1.4.2.js"></script>
+		<script>
+			$(document).ready(function(){
+				$(".scroll").click(function(event){
+					//prevent the default action for the click event - don't do this if you want the anchor urls to work
+					//event.preventDefault();
+
+					//get the full url - like mysitecom/index.htm#home
+					var full_url = this.href;
+
+					//split the url by # and get the anchor target name - home in mysitecom/index.htm#home
+					var parts = full_url.split("#");
+					var trgt = parts[1];
+
+					//get the top offset of the target anchor
+					var target_offset = $("#"+trgt).offset();
+					var target_top = target_offset.top;
+
+					//goto that anchor by setting the body scroll top to anchor top
+					$('html, body').animate({scrollTop:target_top}, 500);
+					
+					//TODO: set the url so that someone can send a link to the page?
+				});
+				$("h3").each(function(index,value){
+					$(value).css("margin-top",$("#navigation").height() + 40);
+				});
+				$("#navigation").each(function(index,value){
+					$("#navigation-under").css("height",$("#navigation").height()+10+"px");
+				});
+			});
+		</script>
+    </head>
+    <body>
+	
+		<!-- content right column -->
+		
+		<div id="right">
+			<div id="navigation">
+				<div style="display:inline;padding-right:20px;">
+                	<h1>
+						Kasia Sullivan
+					</h1>
+					<h2>
+						Personal Trainer
+					</h2>
+				</div>
+				<a href="#introduction" class="scroll">Introduction</a> &nbsp;
+				<a href="#testimonials" class="scroll">Testimonials</a> &nbsp;
+				<a href="#specialties" class="scroll">Specialties</a> &nbsp;
+				<a href="#credentials" class="scroll">Credentials</a>
+			</div>
+			<div id="navigation-under">
+			</div>
+			
+			<div id="content">
+				
+				<h3></h3>
+				
+				<img src="business-card-tilted.png"/>
+				
+				<a hame="introduction" id="introduction"/>
+				<h3>Introduction</h3>
+				<div>
+					<p>
+						My goal and passion is to guide people to be healthy and confident through fitness: Teach body mechanics to train efficiently and in a way people enjoy. The human body has unlimited power to heal itself; give it the opportunity and environment to do so and you will notice an incredible difference in all aspects of your life.  I have worked with clients in Cambridge, Somerville, and Arlington since 2005 and have led fitness classes at gyms throughout Cambridge.
+					</p>
+					<p>
+						I am certified, insured, and always valid and updated with safety programs such as CPR.  What I offer in my services is a personal training session in your  home which starts with a complementary consultation (we talk about your fitness goals and what you try to archive), fitness assessment (checking your weight, body fat, measurements), and postural assessments, so we can see progress in your training.  I can bring to your home equipment like bosu ball, swiss ball, gliding disks, kettle belts, TRX, and kickboxing equipment. Most importantly, every training session is customized to your personal needs and goals.
+					</p>
+				</div>
+				
+				<a hame="testimonials" id="testimonials"/>
+				<h3>Testimonials</h3>
+				<div>
+					<blockquote>
+						Kasia is my personal health and fitness guru! Kasia's passion for her craft is evident by her motivating and upbeat classes. If you are like me and hate to exercise then Kasia is the perfect trainer/instructor. She keeps her class interesting by always mixing up the exercises and equipment. At the end of the class I always feel energized, stronger and really sweaty!
+					</blockquote>
+					<div class="quote-attribution">
+						- Patricia S, part time working and stay home mom
+					</div>
+					
+					<blockquote>
+						Kasia is the most dedicated trainer I know.  I am always amazed how she goes the extra miles for all her clients.  She will research extensively clients' questions or new exercises for someones problems.  She is very conscientious about form and about the best program for her specific clients.  She teaches new exercises with such patience but most importantly she is a great motivator.  She knows when to push and when to just encourage.  She is more than a trainer, she is a coach, friend, mentor, and a cheerleader.  I would highly recommend Kasia as a top rate fitness professional.
+					</blockquote>
+					<div class="quote-attribution">
+						- Rachel K, Personal trainer and bussiness owner
+					</div>
+					
+					<blockquote>
+						She takes obvious pride out of making a difference in my and her clients' lives -- something I believe is unique no matter what we get up and do each day -- and it makes a difference! Kasia motivated me to work harder and smarter in my work-out in ways I would never have done without her help.
+						I think the aspect of training with Kasia that impresses me most is her commitment to her craft. It was obvious to me at my first session that she really took the extra time to prepare specifically for my training needs and tailor her in-depth knowledge to both what my goals were and my current level of fitness. She was never rushed, never generic, always energetic, and really excited me to work hard.  
+						It was clear to me from day 1 that Kasia is truly dedicated to her work and brings it to her sessions every day.  It's obvious se loves fitness and helping me and other clients attain their fitness and health goals.  
+					</blockquote>
+					<div class="quote-attribution">
+						- Carolyn S, MD
+					</div>
+				</div>
+				
+				
+				<a name="specialties" id="specialties"/>
+				<h3>Specialties</h3>
+				<div>
+					<ul>
+						<li>Functional training
+						<li>Prenatal, Postnatal Training
+						<li>Weight loss, endurance and hypertrophy training
+						<li>Sport specific training power, agility &nbsp; speed training
+						<li>Muscle Conditioning / resistance training
+						<li>Bosu Boot Camp
+						<li>Urban Rebounding
+						<li>Aquatics fitness
+					</ul>
+				</div>
+				
+				
+				<a name="credentials" id="credentials"/>
+				<h3><a href="#">Credentials / Certifications</a></h3>
+				<div>
+					<p>
+						<ul>
+							<li>SCW - Fitness Conference	2007-2010
+							<li>SCW - Advanced functional Personal Training	2010
+							<li>SCW - Moms in Motion - Prenatal, Postnatal Training	2009
+							<li>SCW - Water Aerobics	2008
+							<li>National Academy of Sports Medicine - Certified Personal Trainer	2007-2011
+							<li>ISCA - Group Exercise Instructor	2006
+							<li>ISCA - Cardio Kickboxing	2006
+							<li>ISCA - Partner Assisted Stretching	2006
+							<li>Red Cross - Adult & Child CPR / AED	2005
+						</code>
+					</p>
+				</div>
+			</div>
+			
+        </div><!-- end right div -->
+
+		<!-- resizable left column -->
+		
+        <div id="left">
+            <img src="kasia_sullivan_background.jpg" class="stretch" alt=""/>
+        </div>
+        
+
+		<!-- google analytics -->
+
+        
+        <script type="text/javascript">
+
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-21685511-1']);
+          _gaq.push(['_trackPageview']);
+
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+
+        </script>
+        
+    </body>
+</html>
